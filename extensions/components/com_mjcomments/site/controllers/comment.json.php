@@ -36,7 +36,7 @@ class MjcommentsControllerComment extends JControllerForm
     // Check for validation errors
 		if (!$form)
 		{
-      $message 	= JText::_('COM_MJCOMMENTS_CONTROLLERS_COMMENT_VALIDATE_FORM_DATA');
+      $message 	= JText::_('COM_MJCOMMENTS_CONTROLLERS_COMMENT_VALIDATE_FORM');
 			$error 		= true;
 
       return false;

@@ -29,6 +29,13 @@ class PlgContentMjformcomment extends JPlugin
 	 */
 	protected $form;
 
+	/**
+	 * An array of objects on success, false on failure
+	 *
+	 * @var    mixed
+	 */
+	protected $comments;
+
   /**
 	 * Displays the comments area
 	 *
@@ -74,26 +81,37 @@ class PlgContentMjformcomment extends JPlugin
 		// Get the comment form
     $this->setCommentForm();
 
+		// Get the comment list
+    $this->setCommentList($content_id);
+
     // Name of the variables that will be used in the layout
 		$data = array(
 						'view' 				=> $context,
 						'form' 				=> $this->form,
 						'formReturn' 	=> $formReturn,
-						'content_id' 	=> $content_id
+						'content_id' 	=> $content_id,
+						'comments' 		=> $this->comments
 					);
-
+					
     return JLayoutHelper::render('default', compact('data'), __DIR__ . '/layouts');
   }
 
   /**
-	 * Method to get the comment form
-   *
-	 * @return   html    Html comment form structure
+	 * Method to set the comment form
 	 */
 	protected function setCommentForm()
 	{
 		$modelForm 	= $this->getModel('Formcomment');
 		$this->form = $modelForm->getForm();
+	}
+
+	/**
+	 * Method to set the comment list
+	 */
+	protected function setCommentList($content_id)
+	{
+		$modelForm 			= $this->getModel('Formlist');
+		$this->comments = $modelForm->getCommentsArticle($content_id);
 	}
 
   /**

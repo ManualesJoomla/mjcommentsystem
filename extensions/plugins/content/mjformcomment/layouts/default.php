@@ -16,5 +16,6 @@ extract($displayData);
 <?php if ($data['view'] == 'com_content.article') : ?>
   <div id="mjformcomments">
     <?php echo JLayoutHelper::render('default_form', compact('data'), __DIR__); ?>
+    <?php echo JLayoutHelper::render('default_list', compact('data'), __DIR__); ?>
   </div>
 <?php endif; ?>
