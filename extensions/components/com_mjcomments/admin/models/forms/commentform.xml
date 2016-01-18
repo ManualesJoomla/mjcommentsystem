@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="basic" label="COM_MJCOMMENTS_FORMS_COMMENTFORM_BASIC">
+		<field
+			name="id"
+			type="text"
+			class="readonly"
+			label="JGLOBAL_FIELD_ID_LABEL"
+			description="JGLOBAL_FIELD_ID_DESC"
+			size="10"
+			default="0"
+			readonly="true"
+		/>
+
+		<field
+			name="content_id"
+			type="text"
+			class="readonly"
+			label="COM_MJCOMMENTS_FORMS_COMMENTFORM_BASIC_CONTENTID_LABEL"
+			description="COM_MJCOMMENTS_FORMS_COMMENTFORM_BASIC_CONTENTID_DESC"
+			readonly="true"
+		/>
+
+		<field
+			name="visitor_name"
+			type="text"
+			label="COM_MJCOMMENTS_FORMS_COMMENTFORM_BASIC_NAME_LABEL"
+			description="COM_MJCOMMENTS_FORMS_COMMENTFORM_BASIC_NAME_DESC"
+			filter="string"
+			required="true"
+			size="30"
+			class="form-control"
+		/>
+
+		<field
+			name="visitor_email"
+			type="email"
+			label="COM_MJCOMMENTS_FORMS_COMMENTFORM_BASIC_EMAIL_LABEL"
+			description="COM_MJCOMMENTS_FORMS_COMMENTFORM_BASIC_EMAIL_DESC"
+			message="COM_MJCOMMENTS_FORMS_COMMENTFORM_BASIC_EMAIL_MESSAGE"
+			filter="string"
+			required="true"
+			size="30"
+			validate="email"
+			class="form-control"
+		/>
+
+		<field
+			name="visitor_comments"
+			type="editor"
+			label="COM_MJCOMMENTS_FORMS_COMMENTFORM_BASIC_COMMENTS_LABEL"
+			description="COM_MJCOMMENTS_FORMS_COMMENTFORM_BASIC_COMMENTS_DESC"
+			rows="3"
+			required="true"
+			filter="JComponentHelper::filterText"
+			buttons="false"
+		/>
+
+		<field
+			name="created"
+			type="calendar"
+			label="COM_MJCOMMENTS_FORMS_COMMENTFORM_BASIC_CREATED_LABEL"
+			description="COM_MJCOMMENTS_FORMS_COMMENTFORM_BASIC_CREATED_DESC"
+			size="22"
+			format="%Y-%m-%d %H:%M:%S"
+			filter="user_utc"
+		/>
+
+		<field
+			name="state"
+			type="commentstatus"
+			class="chzn-color-state"
+			label="JSTATUS"
+			description="JFIELD_PUBLISHED_DESC"
+		/>
+
+		<field
+			name="checked_out"
+			type="hidden"
+			filter="unset"
+		/>
+
+		<field
+			name="checked_out_time"
+			type="hidden"
+			filter="unset"
+		/>
+
+	</fieldset>
+</form>

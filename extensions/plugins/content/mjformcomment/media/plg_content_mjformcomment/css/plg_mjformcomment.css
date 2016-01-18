@@ -1,0 +1,23 @@
+/* GLOBAL
+-------------------------------------------------- */
+#mjNotification{
+   position: fixed;
+   top: 60px;
+   z-index: 999999;
+}
+#mjNotification .mjalert {
+   padding: 15px;
+   margin-bottom: 20px;
+}
+
+#mjNotification .mjalert-red {
+   color: #ffffff;
+   background-color: #c0392b;
+}
+
+#mjNotification .mjalert-green {
+   color: #ffffff;
+   background-color: #27ae60;
+}
+
+#mjNotification .mjalert p {margin-bottom: 0;}
