@@ -57,13 +57,29 @@ class PlgContentMjformcomment extends JPlugin
 			return false;
 		}
 
+		// Add media file
+		JHtml::_('jquery.framework');
+		JHtml::script(JUri::base() . 'media/pkg_mjcommentsystem/plg_content_mjformcomment/js/plg_mjformcomment.js', false, true);
+		JHtml::stylesheet(JUri::base() . 'media/pkg_mjcommentsystem/plg_content_mjformcomment/css/plg_mjformcomment.css', false, true, false);
+
+		// Add the language file of the component
+		$lang = JFactory::getLanguage();
+		$basePath = JPATH_SITE . '/components/com_mjcomments';
+		$lang->load('com_mjcomments', $basePath, null, true);
+
+		// Assign value to the layout variables
+		$content_id = $row->id;
+		$formReturn = 'index.php?option=com_mjcomments&task=comment.send&format=json';
+
 		// Get the comment form
     $this->setCommentForm();
 
     // Name of the variables that will be used in the layout
 		$data = array(
-						'view' => $context,
-						'form' => $this->form
+						'view' 				=> $context,
+						'form' 				=> $this->form,
+						'formReturn' 	=> $formReturn,
+						'content_id' 	=> $content_id
 					);
 
     return JLayoutHelper::render('default', compact('data'), __DIR__ . '/layouts');

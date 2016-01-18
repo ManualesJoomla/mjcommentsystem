@@ -9,5 +9,11 @@
 
 defined('_JEXEC') or die;
 
-$controller = JControllerLegacy::getInstance('Mjcomments');
-$controller->execute(JFactory::getApplication()->input->get('task'));
+/**
+ * Base controller class.
+ *
+ */
+class MjcommentsController extends JControllerLegacy
+{
+
+}

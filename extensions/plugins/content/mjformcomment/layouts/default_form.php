@@ -9,6 +9,8 @@
 
 defined('_JEXEC') or die;
 
+JHTML::_('behavior.formvalidator');
+
 extract($displayData);
 
 ?>
@@ -21,7 +23,7 @@ extract($displayData);
 	</div>
 <?php else : ?>
 	<div class="row">
-		<form id="comments-form" action="" method="post" class="form-validate" enctype="multipart/form-data">
+		<form id="comments-form" action="<?php echo $data['formReturn']; ?>" method="post" class="form-validate" enctype="multipart/form-data">
 			<div class="col-md-6">
 				<div class="form-group">
 					<?php echo $data['form']->getLabel('visitor_name'); ?>
@@ -41,7 +43,8 @@ extract($displayData);
 			</div>
 			<div class="col-md-3 col-md-offset-9">
 				<div class="form-actions">
-					<button type="submit" class="btn btn-primary btn-block">Enviar</button>
+					<button type="submit" class="btn btn-primary btn-block validate">Enviar</button>
+					<input type="hidden" id="article_id" name="jform[content_id]" value="<?php echo $data['content_id']; ?>" />
 				</div>
 			</div>
 		</form>

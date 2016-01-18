@@ -10,12 +10,15 @@
 	<version>1.0.0</version>
 	<description>PLG_CONTENT_MJFORMCOMMENT_XML_DESCRIPTION</description>
 
-
 	<files>
 		<folder>layouts</folder>
 		<folder>language</folder>
 		<filename plugin="mjformcomment">mjformcomment.php</filename>
 	</files>
+
+	<media folder="media" destination="pkg_mjcommentsystem">
+		<folder>plg_content_mjformcomment</folder>
+	</media>
 
 	<config>
 		<fields name="params">

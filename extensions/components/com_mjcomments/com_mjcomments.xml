@@ -27,7 +27,9 @@
 	</update>
 
 	<files folder="site">
+		<filename>controller.php</filename>
 		<filename>mjcomments.php</filename>
+		<folder>controllers</folder>
 		<folder>language</folder>
 		<folder>models</folder>
 	</files>
@@ -36,6 +38,7 @@
 		<files folder="admin">
 			<filename>mjcomments.php</filename>
 			<folder>sql</folder>
+			<folder>tables</folder>
 		</files>
 	</administration>
 </extension>
