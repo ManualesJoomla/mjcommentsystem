@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.1" method="upgrade">
+	<name>com_mjcomments</name>
+	<author>Carlos Rodriguez</author>
+	<creationDate>November 2015</creationDate>
+	<copyright>Copyright (C) 2015 Carlos Rodríguez. All rights reserved.</copyright>
+	<license>License http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+	<authorEmail>crsanchez8646@gmail.com</authorEmail>
+	<authorUrl>manualesjoomla.es</authorUrl>
+	<version>1.0.0</version>
+	<description>COM_MJCOMMENTS_XML_DESCRIPTION</description>
+
+  <install>
+		<sql>
+			<file charset="utf8" driver="mysql">sql/install/mysql/install.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file charset="utf8" driver="mysql">sql/install/mysql/uninstall.sql</file>
+		</sql>
+	</uninstall>
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+
+	<files folder="site">
+		<filename>controller.php</filename>
+		<filename>mjcomments.php</filename>
+		<folder>controllers</folder>
+		<folder>language</folder>
+		<folder>models</folder>
+	</files>
+
+	<administration>
+		<menu>com_mjcomments</menu>
+
+		<files folder="admin">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>mjcomments.php</filename>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>language</folder>
+			<folder>media</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+	</administration>
+</extension>

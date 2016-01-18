@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="package" version="3.1" method="upgrade">
+	<name>pkg_mjcommentsystem</name>
+  <author>Carlos Rodriguez</author>
+  <authorEmail>crsanchez8646@gmail.com</authorEmail>
+  <authorUrl>manualesjoomla.es</authorUrl>
+	<creationDate>November 2015</creationDate>
+	<packager>Carlos Rodriguez</packager>
+	<packagename>mjcommentsystem</packagename>
+	<packagerurl>manualesjoomla.es</packagerurl>
+	<version>1.0.0</version>
+	<description>PKG_MJCOMMENTSYSTEM_XML_DESCRIPTION</description>
+	<!-- Extension to install -->
+	<files folder="extensions">
+		<!-- Components -->
+		<file type="component" id="mjcomments">components/com_mjcomments</file>
+		<!-- Plugins -->
+		<file type="plugin" id="mjformcomment" group="content">plugins/content/mjformcomment</file>
+	</files>
+	<languages folder="language">
+		<language tag="es-ES">es-ES/es-ES.pkg_mjcommentsystem.sys.ini</language>
+	</languages>
+</extension>
