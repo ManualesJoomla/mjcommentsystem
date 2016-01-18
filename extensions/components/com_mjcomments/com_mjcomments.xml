@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.1" method="upgrade">
+	<name>com_mjcomments</name>
+	<author>Carlos Rodriguez</author>
+	<creationDate>November 2015</creationDate>
+	<copyright>Copyright (C) 2015 Carlos Rodríguez. All rights reserved.</copyright>
+	<license>License http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+	<authorEmail>crsanchez8646@gmail.com</authorEmail>
+	<authorUrl>manualesjoomla.es</authorUrl>
+	<version>1.0.0</version>
+	<description>COM_MJCOMMENTS_XML_DESCRIPTION</description>
+
+  <install>
+		<sql>
+			<file charset="utf8" driver="mysql">sql/install/mysql/install.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file charset="utf8" driver="mysql">sql/install/mysql/uninstall.sql</file>
+		</sql>
+	</uninstall>
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+
+	<files folder="site">
+		<filename>mjcomments.php</filename>
+		<folder>language</folder>
+		<folder>models</folder>
+	</files>
+
+	<administration>
+		<files folder="admin">
+			<filename>mjcomments.php</filename>
+			<folder>sql</folder>
+		</files>
+	</administration>
+</extension>

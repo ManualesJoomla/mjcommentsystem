@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="content" method="upgrade">
+	<name>plg_content_mjformcomment</name>
+	<author>Carlos Rodriguez</author>
+	<creationDate>December 2015</creationDate>
+	<copyright>Copyright (C) 2015 Carlos Rodriguez. All rights reserved.</copyright>
+	<license>License http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+	<authorEmail>crsanchez8646@gmail.com</authorEmail>
+	<authorUrl>manualesjoomla.es</authorUrl>
+	<version>1.0.0</version>
+	<description>PLG_CONTENT_MJFORMCOMMENT_XML_DESCRIPTION</description>
+
+
+	<files>
+		<folder>layouts</folder>
+		<folder>language</folder>
+		<filename plugin="mjformcomment">mjformcomment.php</filename>
+	</files>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="layout"
+					type="modulelayout"
+					default="_:default"
+					label="PLG_CONTENT_MJFORMCOMMENT_PARAMS_LAYOUT"
+					description="PLG_CONTENT_MJFORMCOMMENT_PARAMS_LAYOUT_DESC"
+				/>
+				<field
+					name="catid"
+					type="category"
+					extension="com_content"
+					multiple="true"
+					default=""
+					size="10"
+					label="JCATEGORY"
+					description="PLG_CONTENT_MJFORMCOMMENT_PARAMS_CATEGORY_DESC"
+				>
+					<option value="all">JOPTION_ALL_CATEGORIES</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
