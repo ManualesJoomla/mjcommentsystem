@@ -9,6 +9,16 @@
 
 defined('_JEXEC') or die;
 
-$controller = JControllerLegacy::getInstance('Mjcomments');
-$controller->execute(JFactory::getApplication()->input->get('task'));
-$controller->redirect();
+/**
+ * Base controller class.
+ *
+ */
+class MjcommentsController extends JControllerLegacy
+{
+  /**
+	 * The default view for the display function.
+	 *
+	 * @var    string
+	 */
+	protected $default_view = 'commentslist';
+}

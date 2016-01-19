@@ -35,10 +35,18 @@
 	</files>
 
 	<administration>
+		<menu>com_mjcomments</menu>
+
 		<files folder="admin">
+			<filename>controller.php</filename>
 			<filename>mjcomments.php</filename>
+			<folder>controllers</folder>
+			<folder>language</folder>
+			<folder>media</folder>
+			<folder>models</folder>
 			<folder>sql</folder>
 			<folder>tables</folder>
+			<folder>views</folder>
 		</files>
 	</administration>
 </extension>

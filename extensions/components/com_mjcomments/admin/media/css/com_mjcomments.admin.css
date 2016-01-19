@@ -1,0 +1,12 @@
+/* GLOBAL
+-------------------------------------------------- */
+.admin.com_mjcomments .icon-title.comments {
+  background: url('../img/logo-view-commentslist-48.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0 6px;
+  width: 25px;
+  height: 27px;
+  display: inline-block;
+  margin-right: 5px;
+}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="basic" label="COM_MJCOMMENTS_FORMS_COMMENTFORM_BASIC">
+		<field
+			name="visitor_name"
+			type="text"
+			label="COM_MJCOMMENTS_FORMS_COMMENTFORM_BASIC_NAME_LABEL"
+			description="COM_MJCOMMENTS_FORMS_COMMENTFORM_BASIC_NAME_DESC"
+			filter="string"
+			required="true"
+			size="30"
+			class="form-control"
+		/>
+
+		<field
+			name="visitor_email"
+			type="email"
+			label="COM_MJCOMMENTS_FORMS_COMMENTFORM_BASIC_EMAIL_LABEL"
+			description="COM_MJCOMMENTS_FORMS_COMMENTFORM_BASIC_EMAIL_DESC"
+			message="COM_MJCOMMENTS_FORMS_COMMENTFORM_BASIC_EMAIL_MESSAGE"
+			filter="string"
+			required="true"
+			size="30"
+			validate="email"
+			class="form-control"
+		/>
+
+		<field
+			name="visitor_comments"
+			type="textarea"
+			label="COM_MJCOMMENTS_FORMS_COMMENTFORM_BASIC_COMMENTS_LABEL"
+			description="COM_MJCOMMENTS_FORMS_COMMENTFORM_BASIC_COMMENTS_DESC"
+			rows="6"
+			cols="100%"
+			required="true"
+			class="form-control"
+			hint="COM_MJCOMMENTS_FORMS_COMMENTFORM_BASIC_COMMENTS_PLACEHOLDER"
+		/>
+
+		<field
+			name="content_id"
+			type="hidden"
+			default="0"
+		/>
+	</fieldset>
+</form>
