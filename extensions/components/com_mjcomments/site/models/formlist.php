@@ -51,6 +51,7 @@ class MjcommentsModelFormlist extends JModelList
 		$this->setState('list.direction', $direction);
     $this->setState('list.start', 0);
     $this->setState('list.limit', 0);
+		$this->setState('filter.published', 1);
 	}
 
   /**
@@ -101,6 +102,14 @@ class MjcommentsModelFormlist extends JModelList
   		$query->where('a.content_id = ' . (int) $contentId);
   	}
 
+		// Filter by published state
+		$published = $this->getState('filter.published');
+
+		if (is_numeric($published))
+		{
+			$query->where('a.state = ' . (int) $published);
+		}
+
   	// Add the list ordering clause.
   	$query->order($this->getState('list.ordering', 'a.created') . ' ' . $this->getState('list.direction', 'DESC'));
 
@@ -123,6 +132,7 @@ class MjcommentsModelFormlist extends JModelList
 	{
 		// Compile the store id.
 		$id .= ':' . serialize($this->getState('filter.content_id'));
+		$id .= ':' . serialize($this->getState('filter.published'));
 
 		return parent::getStoreId($id);
 	}
