@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+  <name>mod_mjcomments</name>
+	<author>Carlos Rodriguez</author>
+	<creationDate>January 2016</creationDate>
+	<copyright>Copyright (C) 2016 Carlos Rodriguez. All rights reserved.</copyright>
+	<license>License http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+	<authorEmail>crsanchez8646@gmail.com</authorEmail>
+	<authorUrl>manualesjoomla.es</authorUrl>
+	<version>1.0.0</version>
+	<description>MOD_MJCOMMENTS_XML_DESCRIPTION</description>
+
+	<files>
+		<folder>language</folder>
+		<folder>module</folder>
+		<folder>tmpl</folder>
+		<filename module="mod_mjcomments">mod_mjcomments.php</filename>
+		<filename>mod_mjcomments.xml</filename>
+	</files>
+
+  <media folder="media" destination="pkg_mjcommentsystem">
+		<folder>mod_mjcomments</folder>
+	</media>
+
+  <config>
+		<fields name="params">
+			<fieldset name="basic">
+        <field
+					name="layout"
+					type="modulelayout"
+					default="_:latest"
+					label="MOD_MJCOMMENTS_COMMENTS_PARAMS_LAYOUT"
+					description="MOD_MJCOMMENTS_COMMENTS_PARAMS_LAYOUT_DESC"
+				/>
+
+        <field type="spacer" name="spacerbasic" hr="true" />
+
+        <field
+					name="exclude_comments"
+					type="text"
+					default="0"
+					filter="integer"
+					label="MOD_MJCOMMENTS_COMMENTS_PARAMS_EXCLUDE_COMMENTS"
+					description="MOD_MJCOMMENTS_COMMENTS_PARAMS_EXCLUDE_COMMENTS_DESC"
+				/>
+
+        <field
+					name="count"
+					type="text"
+					default="5"
+					filter="integer"
+					label="MOD_MJCOMMENTS_COMMENTS_PARAMS_COUNT"
+					description="MOD_MJCOMMENTS_COMMENTS_PARAMS_COUNT_DESC"
+				/>
+      </fieldset>
+		</fields>
+	</config>
+</extension>

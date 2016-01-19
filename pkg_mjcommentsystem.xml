@@ -14,6 +14,10 @@
 	<files folder="extensions">
 		<!-- Components -->
 		<file type="component" id="mjcomments">components/com_mjcomments</file>
+		<!-- Libraries -->
+		<file type="library" id="lib_epale">libraries/epale</file>
+		<!-- Modules -->
+		<file type="module" id="mod_mjcomments" client="site">modules/site/comments</file>
 		<!-- Plugins -->
 		<file type="plugin" id="mjformcomment" group="content">plugins/content/mjformcomment</file>
 	</files>

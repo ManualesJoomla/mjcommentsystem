@@ -1,0 +1,28 @@
+<?php
+/**
+ * @package     MJ.Module
+ * @subpackage  Comments
+ *
+ * @copyright   Copyright (C) 2015 Carlos Rodriguez. All rights reserved.
+ * @license     License http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
+ */
+
+defined('_JEXEC') or die;
+
+extract($displayData);
+
+/**
+ * Layout variables
+ * -----------------
+ * @var   string           	$cssClass        Module CSS class
+ * @var   string           	$cssId           Module CSS identifier
+ * @var   object           	$module          Module data as it comes from Joomla
+ * @var   MjModule  				$moduleInstance  Module rendering this layout
+ * @var   JRegistry        	$params          Object with the module config
+ */
+
+$cssId = $cssId ? 'id="' . $cssId . '"' : null;
+?>
+<div class="<?php echo $cssClass; ?> alert alert-error" <?php echo $cssId; ?>>
+	<?php echo $moduleInstance->getError(); ?>
+</div>

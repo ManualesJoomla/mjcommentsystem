@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="library" method="upgrade" version="3.1">
+  <name>Epale - Library</name>
+  <libraryname>epale</libraryname>
+  <creationDate>January 2015</creationDate>
+  <author>Carlos Rodriguez</author>
+  <authorEmail>crsanchez8646@gmail.com</authorEmail>
+  <authorUrl>manualesjoomla.es</authorUrl>
+  <copyright>Copyright (C) 2016 Carlos Rodriguez - All rights reserved.</copyright>
+  <license>License http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+  <version>1.0.0</version>
+  <description>Epale common libraries</description>
+  <files>
+    <folder>module</folder>
+    <filename>epale.xml</filename>
+    <filename>library.php</filename>
+  </files>
+</extension>
